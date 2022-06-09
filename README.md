@@ -12,7 +12,6 @@ Website for Tourism Guiding. The website enables the user to share his trips thr
 -  Getting to know new places.
 -  Communicate directly with the residents of the countries to organize the trip.
 -  Feedback on service.
--  
 ## User Stories
 - 	Type of users: Editors, Tour guides, clients
 
