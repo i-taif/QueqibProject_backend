@@ -1,13 +1,13 @@
 # Project Name: Queqib 'Tourism Guiding Website'
 
 
-##Idea:
+## Idea:
 
 Website for Tourism Guiding. The website enables the user to share his trips through several posts with enabling the comments and conversation feature. Also the user, being a service provider, can provide several services, such as hotels booking, train tickets, cruise and reception from the airport ,etc. So that the client has a visualization of his entire journey.
-##Inspiration:
+## Inspiration:
  Getting to know the tourist areas and facilitate travel planning and management for the client.
 
-##List of Services / Features:
+## List of Services / Features:
 •	Getting to know new places.
 •	 Communicate directly with the residents of the countries to organize the trip.
 •	Feedback on service.
@@ -21,7 +21,7 @@ Website for Tourism Guiding. The website enables the user to share his trips thr
  •	Read Feedback.
 
 
-###Tour guide
+### Tour guide
 -    Edit Profile information.
 -  	Search for countries.
 -  Create, Read, Update, Delete Posts within countries.
