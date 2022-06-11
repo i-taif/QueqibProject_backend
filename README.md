@@ -16,7 +16,7 @@ Website for Tourism Guiding. The website enables the user to share his trips thr
 - 	Type of users: Editors, Tour guides, clients
 
 ### Editor
--  Creat, Edit, Delete cities.  #Done
+-  Creat, Edit, Delete cities.     #Done
 -  Read, Delete posts.
 -  Create, Read, Delete comments.
 -  Read, Delete Users.
