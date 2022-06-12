@@ -24,7 +24,7 @@ Website for Tourism Guiding. The website enables the user to share his trips thr
 
 
 ### Tour guide
--  Read, Create, Edit, and delete Profile.
+-  Read, Create, Edit, and delete Profile.  #Done
 -  Search for cities.
 -  Create, Read, Update, Delete Posts within cities.
 -  View and add Comments in Post.
