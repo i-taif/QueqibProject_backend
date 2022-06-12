@@ -8,7 +8,6 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.permissions import IsAuthenticated
 from django.contrib.auth.models import User
 
-
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])
 @permission_classes([IsAuthenticated])
@@ -41,7 +40,7 @@ def update_city(request : Request, slug):
     if not account.is_authenticated or not account.has_perm('QueqibApp.change_city'):
         return Response("Not Allowed", status = status.HTTP_400_BAD_REQUEST)
     city = City.objects.get(slug=slug)
-
+    print(request.user.id)
     updated_city = CitySerializer(instance=city, data=request.data)
     if updated_city.is_valid():
         updated_city.save()
@@ -55,13 +54,15 @@ def update_city(request : Request, slug):
         return Response({"msg" : "bad request, cannot update"}, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET'])
+@authentication_classes([])
+@permission_classes([])
 def list_city(request : Request):
     '''list all city'''
     cities = City.objects.all()
 
     dataResponse = {
         "msg" : "List of All cities",
-        "students" : CitySerializer(instance=cities, many=True).data
+        "cities" : CitySerializer(instance=cities, many=True).data
         }
 
     return Response(dataResponse)
@@ -79,13 +80,15 @@ def delete_city(request: Request, slug):
     return Response({"msg" : "Deleted Successfully"})
 
 
-
-
+@api_view(['POST'])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
 def create_profile(request : Request):
     ''' create profile by Tour guide'''
+    print(request.user.id)
     user= request.user
     if not user.is_authenticated or not user.has_perm('QueqibApp.add_profile'):
-        return Response("Not Allowed", status = status.HTTP_400_BAD_REQUEST)
+        return Response("You Don't Have Permission to Create Profile", status = status.HTTP_400_BAD_REQUEST)
     new_profile=Profile(user=user)
     if request.method == "POST":
         serializer = ProfileSerializer(new_profile,data=request.data)
@@ -99,6 +102,64 @@ def create_profile(request : Request):
         print(serializer.errors)
         dataResponse = {"msg" : "couldn't create a profile"}
         return Response( dataResponse, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@authentication_classes([])
+@permission_classes([])
+def list_profile(request : Request):
+    '''list all profile'''
+    profiles = Profile.objects.all()
+
+    dataResponse = {
+        "msg" : "List of All profiles",
+        "profile" : ProfileSerializer(instance=profiles, many=True).data
+        }
+
+    return Response(dataResponse)
+
+@api_view(['PUT'])
+@authentication_classes([JWTAuthentication])
+@permission_classes((IsAuthenticated,))
+def update_profile(request : Request, slug):
+    '''update profile by creator'''
+    profile = Profile.objects.get(slug=slug)
+    user=request.user
+    if profile.user != user:
+        return Response({'response':"You Don't Have Permission To Edit That"})
+    updated_profile = ProfileSerializer(instance=profile, data=request.data)
+    if updated_profile.is_valid():
+        updated_profile.save()
+        responseData = {
+            "msg" : "updated successefully"
+        }
+
+        return Response(responseData)
+    else:
+        print(updated_profile.errors)
+        return Response({"msg" : "bad request, cannot update"}, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['DELETE'])
+@authentication_classes([JWTAuthentication])
+@permission_classes([IsAuthenticated])
+def delete_profile(request: Request, slug):
+    '''Delete profile by creator'''
+    profile = Profile.objects.get(slug=slug)
+    user=request.user
+    if profile.user != user:
+        return Response({'response':"You Don't Have Permission To Delete That"})
+    if request.method == 'DELETE':
+       opration= profile.delete()
+       data={}
+    if opration:
+        data['success']="Deleted Successfully"
+    else:
+        data['faild']="Deleted failed"
+    return Response(data=data)
+
+
+
+
 
 
 

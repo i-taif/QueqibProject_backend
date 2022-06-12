@@ -1,15 +1,18 @@
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
-from rest_framework.decorators import api_view
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework_simplejwt.tokens import AccessToken,Token
 from .serializers import UserRegisterSerializer
+from rest_framework.decorators import api_view, authentication_classes,permission_classes
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
-
 @api_view(['POST'])
+@authentication_classes([])
+@permission_classes([])
 def register_user(request : Request):
     
     user_serializer  = UserRegisterSerializer(data=request.data)
@@ -23,8 +26,10 @@ def register_user(request : Request):
 
 
 @api_view(['POST'])
+@authentication_classes([])
+@permission_classes([])
 def login_user(request : Request):
-
+    print(request.user.id)
     if 'username' in request.data and 'password' in request.data:
         user = authenticate(request, username=request.data['username'], password=request.data['password'])
         if user is not None:

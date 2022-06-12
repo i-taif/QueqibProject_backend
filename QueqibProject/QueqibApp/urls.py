@@ -9,7 +9,9 @@ urlpatterns = [
    path('list-cities',views.list_city,name='list-cities'),
    path('delete-city/<slug>',views.delete_city,name='delete-city'),
    path('create-profile',views.create_profile,name='create-profile'),
-
+   path('list-profile',views.list_profile,name='list-profile'),
+   path('update-profile/<slug>',views.update_profile,name='update-profile'),
+   path('delete-profile/<slug>',views.delete_profile,name='delete-profile'),
 
 
 

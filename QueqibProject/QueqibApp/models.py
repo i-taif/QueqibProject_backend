@@ -19,6 +19,7 @@ class Profile(models.Model):
     name=models.CharField(max_length=30)
     bio=models.TextField()
     city=models.ManyToManyField(City)
+    slug=models.SlugField()
     def __str__(self) -> str:
         return self.name
 
