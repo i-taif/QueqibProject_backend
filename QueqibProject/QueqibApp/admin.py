@@ -10,7 +10,7 @@ class Profileadmin(admin.ModelAdmin):
 admin.site.register(Profile,Profileadmin)
 
 class Postadmin(admin.ModelAdmin):
-   list_display = ('title','body','user','image','profile')
+   list_display = ('title','body','image','profile')
 admin.site.register(Post,Postadmin)
 
 class Commentadmin(admin.ModelAdmin):

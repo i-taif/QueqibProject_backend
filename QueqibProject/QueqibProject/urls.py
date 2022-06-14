@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('QueqibApp.urls')),
     path('', include('account.urls')),
+    path('', include('chatApp.urls')),
 ]
