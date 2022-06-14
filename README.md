@@ -17,24 +17,24 @@ Website for Tourism Guiding. The website enables the user to share his trips thr
 
 ### Editor
 -  Creat, Edit, Delete cities.     #Done
--  Read, Delete posts.
--  Create, Read, Delete comments.
--  Read, Delete Users.
--  Read Feedback.
+-  Read, Delete posts. #Done
+-  Create, Read, Delete comments. #Done
+-  Read, Delete Users. #Done
+-  Read Feedback. #Done
 
 
 ### Tour guide
 -  Read, Create, Edit, and delete Profile.  #Done
--  Search for cities.
--  Create, Read, Update, Delete Posts within cities.
--  View and add Comments in Post.
--  View joined Chatting.
+-  Search for cities. #Done
+-  Create, Read, Update, Delete Posts within cities. #Done
+-  View and add Comments in Post. #Done
+-  View joined Chatting. #Done
 
 
 ### Client
--  Search for cities.
--  View the Tour guides Profile  .
--  View the Post information.
--  View and add Comments in Post.
--  joined chatting with Tour guides
--  Feedback for services .
+-  Search for cities. #Done
+-  View the Tour guides Profile.  #Done
+-  View the Post information. #Done
+-  View and add Comments in Post. #Done
+-  joined chatting with Tour guides. Done
+-  Feedback for services. #Done
