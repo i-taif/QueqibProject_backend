@@ -4,7 +4,7 @@
 ## Idea:
 
 Website for Tourism Guiding. The website enables the user to share his trips through several posts with enabling the comments and conversation feature. Also the user, being a service provider, can provide several services, such as hotels booking, train tickets, cruise and reception from the airport ,etc. So that the client has a visualization of his entire journey.
-link: desolate-inlet-80374.herokuapp.com
+#link: desolate-inlet-80374.herokuapp.com
 
 ## Inspiration:
  Getting to know the tourist areas and facilitate travel planning and management for the client.
