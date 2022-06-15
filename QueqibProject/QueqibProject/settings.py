@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#z*h^(ex2=p&+y+u&y@wb%+s(z)ksh1a^9yk30lq^n^dz=!x!)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -87,6 +87,9 @@ WSGI_APPLICATION = 'QueqibProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# Heroku: Update database configuration from $DATABASE_URL.
+
+
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -133,6 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -167,3 +171,19 @@ SIMPLE_JWT = {
 'SLIDING_TOKEN_LIFETIME': timedelta(minutes=14400),
 'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=10),
 }
+
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+# The absolute path to the directory where collectstatic willcollect static files for deployment.
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+# The URL to use when referring to static files (where they will be served from)
+STATIC_URL = '/static/'
+
+# Read SECRET_KEY from an environment variable
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+DEBUG = os.environ.get('DJANGO_DEBUG', True)
+

@@ -1,0 +1,1 @@
+web: gunicorn QueqibProject.wsgi --log-file -
