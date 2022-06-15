@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#z*h^(ex2=p&+y+u&y@wb%+s(z)ksh1a^9yk30lq^n^dz=!x!)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['queqib.herokuapp.com']
 
 
 # Application definition
@@ -90,10 +90,10 @@ WSGI_APPLICATION = 'QueqibProject.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'QueqibProject',
-        'USER': 'postgres',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'NAME': 'd2nn6afbm3kn9l',
+        'USER': 'zoomkihszxqpnd',
+        'PASSWORD': 'bd3346bea08b441d6bdf113bbfa2f74e98efac8f3be03cceb442673d39efd5cd',
+        'HOST': 'ec2-52-72-99-110.compute-1.amazonaws.com',
     }
 }
 
