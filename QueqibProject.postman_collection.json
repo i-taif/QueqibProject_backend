@@ -1,0 +1,1247 @@
+{
+	"info": {
+		"_postman_id": "2578787c-ab1e-402d-99f6-498a5fd3f49d",
+		"name": "QueqibProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21319512"
+	},
+	"item": [
+		{
+			"name": "City",
+			"item": [
+				{
+					"name": "create-city",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc1NTk0LCJpYXQiOjE2NTUyMTE1OTQsImp0aSI6IjM0N2Y1ODBjZGM1NjQ1NjU5NGU2NmZlMGJhMmY4OTI4IiwidXNlcl9pZCI6N30.PnKWzi0LhvYwaQ2jlfZ9DBct0g3pWMHPf5qhFMJHq3s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\": \"https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F930%2F37%2Fpng-transparent-test-icon-laboratory-hallmark-birmingham-assay-office-others\",\r\n    \"City_name\":\"London\",\r\n    \"language\":\"English\",\r\n    \"country\":\"UK\",\r\n    \"slug\":\"BA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/create-city",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"create-city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-cities",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-cities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-city",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer \n",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc1NTk0LCJpYXQiOjE2NTUyMTE1OTQsImp0aSI6IjM0N2Y1ODBjZGM1NjQ1NjU5NGU2NmZlMGJhMmY4OTI4IiwidXNlcl9pZCI6N30.PnKWzi0LhvYwaQ2jlfZ9DBct0g3pWMHPf5qhFMJHq3s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\": \"https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F930%2F37%2Fpng-transparent-test-icon-laboratory-hallmark-birmingham-assay-office-others\",\r\n            \"City_name\": \"London\",\r\n            \"language\": \"English\",\r\n            \"country\": \"UK\",\r\n            \"slug\": \"London\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/update-city/London",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"update-city",
+								"London"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-city",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc1NTk0LCJpYXQiOjE2NTUyMTE1OTQsImp0aSI6IjM0N2Y1ODBjZGM1NjQ1NjU5NGU2NmZlMGJhMmY4OTI4IiwidXNlcl9pZCI6N30.PnKWzi0LhvYwaQ2jlfZ9DBct0g3pWMHPf5qhFMJHq3s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/delete-city/BA",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"delete-city",
+								"BA"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search-city",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/search-city/London",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"search-city",
+								"London"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "city-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/city-details/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"city-details",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "create-profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc1NTk0LCJpYXQiOjE2NTUyMTE1OTQsImp0aSI6IjM0N2Y1ODBjZGM1NjQ1NjU5NGU2NmZlMGJhMmY4OTI4IiwidXNlcl9pZCI6N30.PnKWzi0LhvYwaQ2jlfZ9DBct0g3pWMHPf5qhFMJHq3s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"image\":\"https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F930%2F37%2Fpng-transparent-test-icon-laboratory-hallmark-birmingham-assay-office-others.g\",\r\n    \"name\":\"Sara\",\r\n    \"bio\":\"I'm Tour Guide !\",\r\n    \"slug\":\"Sara\",\r\n    \"cities\":[2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/create-profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"create-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-all-profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc2ODE5LCJpYXQiOjE2NTUyMTI4MTksImp0aSI6IjM3YmM0YzkyYTc0NzQ4N2E4ODJkMzgyYWI0YzJhY2ZkIiwidXNlcl9pZCI6Mn0.z_0jRKhJZFQh8qhOkftpMJIQ4tZKvGFGbCDflXfl0LQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"image\": \"https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F930%2F37%2Fpng-transparent-test-icon-laboratory-hallmark-birmingham-assay-office-others\",\r\n    \"name\": \"Norah\",\r\n    \"bio\": \"I'm Tour Guide !\",\r\n    \"slug\": \"Norah\",\r\n    \"cities\": [3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/update-profile/Norah",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"update-profile",
+								"Norah"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete-profile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc2OTAxLCJpYXQiOjE2NTUyMTI5MDEsImp0aSI6ImQ0ZGQyYzM0MzFhZjQ2NzJiZjQ4ZWI4YmUyMzkzNjBmIiwidXNlcl9pZCI6NX0.POCzWKGc-1qdnWeuIrQZeQS0kD0wljBEWRSTTHtfXX0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/delete-profile/Sara",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"delete-profile",
+								"Sara"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile-details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/profile-details/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"profile-details",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "create-post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"London Post\",\r\n    \"image\":\"https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F930%2F37%2Fpng-transparent-test-icon-laboratory-hallmark-birmingham-assay-office-others\",\r\n    \"body\":\"I'm Here !\",\r\n    \"cities\":3,\r\n    \"slug\":\"LondonPost\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/create-post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"create-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-post",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-post",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"title\": \"London\",\r\n        \"image\": \"https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F930%2F37%2Fpng-transparent-test-icon-laboratory-hallmark-birmingham-assay-office-others\",\r\n        \"body\": \"I'm Here\",\r\n        \"slug\": \"London\",\r\n        \"cities\": 3\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/update-post/LondonPost",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"update-post",
+								"LondonPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-post",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/delete-post/LondonPost",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"delete-post",
+								"LondonPost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/post-details/London",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"post-details",
+								"London"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "add-comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"post\":2,\r\n    \"content\":\"WOW\",\r\n    \"slug\":\"AmirahC\",\r\n    \"comment_date\":\"2019-09-20\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/create-comment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"create-comment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-comments-byPost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-comment/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-comment",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"comment_date\": \"2019-09-20\",\r\n        \"content\": \"WOW!\",\r\n        \"slug\": \"Amirah\",\r\n        \"post\": 2\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/update-comment/AmirahC",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"update-comment",
+								"AmirahC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc1NTk0LCJpYXQiOjE2NTUyMTE1OTQsImp0aSI6IjM0N2Y1ODBjZGM1NjQ1NjU5NGU2NmZlMGJhMmY4OTI4IiwidXNlcl9pZCI6N30.PnKWzi0LhvYwaQ2jlfZ9DBct0g3pWMHPf5qhFMJHq3s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/delete-comment/AmirahC",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"delete-comment",
+								"AmirahC"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-all-comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-all-comment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-all-comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "create-message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sender\":\"Amirah\",\r\n    \"receiver\":\"Norah\",\r\n    \"message\":\" Good \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/create-message",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"create-message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-message",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-message/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-message",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-all-message",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-all-meassge",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-all-meassge"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "create-service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\":\"booking hotel\",\r\n    \"describtion\":\"booking hotel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/create-service",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"create-service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-service-byTourGuide",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-service/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-service",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-service",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_name\":\"booking hotel\",\r\n    \"describtion\":\"booking hotel\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/update-service/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"update-service",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-service",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc3NzUxLCJpYXQiOjE2NTUyMTM3NTEsImp0aSI6ImQxNWI1YWE1YWQ4NzQ4NzE4MjgyMWQ3ZDAwNDlkZTI5IiwidXNlcl9pZCI6Mn0.5T-waFA5tt7wTKw8XX-nNAn91iSkIV9fuxcfZp8TqWs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/delete-service/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"delete-service",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-all-services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-service",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-service"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rating",
+			"item": [
+				{
+					"name": "add-rate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDY4Nzg5LCJpYXQiOjE2NTUyMDQ3ODksImp0aSI6ImFlMGQwNmI4ZWU0MzRjOGY5YWMzNjYxNmM3MjYxOWQ0IiwidXNlcl9pZCI6NH0.xvS1vnQM3jKh_MtlrOLKQ484uJDt4jhKRGuDT7bDkYg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"star\":4,\r\n    \"service\":6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/create-rete",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"create-rete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-rate",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc1NTk0LCJpYXQiOjE2NTUyMTE1OTQsImp0aSI6IjM0N2Y1ODBjZGM1NjQ1NjU5NGU2NmZlMGJhMmY4OTI4IiwidXNlcl9pZCI6N30.PnKWzi0LhvYwaQ2jlfZ9DBct0g3pWMHPf5qhFMJHq3s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-rete/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-rete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login-as-editors",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 0665a0963cf1bd2927d56eb4c7e6db487d7bfb7c",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Ahmed\",\r\n    \"password\":\"Ta@123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-as-TourGuide",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Norah\",\r\n    \"password\":\"Ta@123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login-as-client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Amirah\",\r\n    \"password\":\"Ta@123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "list-all-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-user",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list-username",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/list-user/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"list-user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2MDc1NTk0LCJpYXQiOjE2NTUyMTE1OTQsImp0aSI6IjM0N2Y1ODBjZGM1NjQ1NjU5NGU2NmZlMGJhMmY4OTI4IiwidXNlcl9pZCI6N30.PnKWzi0LhvYwaQ2jlfZ9DBct0g3pWMHPf5qhFMJHq3s",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/delete-user/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"delete-user",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Ahmed\",\r\n    \"email\":\"asma@gmail.com\",\r\n    \"password\":\"Ta@123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
